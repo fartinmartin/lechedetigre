@@ -1,0 +1,126 @@
+.home {
+  min-height: 75vh;
+  padding-top: 6rem;
+
+  background-image: url(../img/svg/logo.svg);
+  background-size: 10%;
+  background-color: var(--lightblue);
+  background-blend-mode: screen;
+
+  color: var(--white);
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+
+  overflow: hidden;
+}
+
+.hero {
+  /* display: flex;
+  justify-content: space-between; */
+}
+
+.hero-object {
+  background: url(../img/cutout_c0.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 0;
+  padding-top: calc(746 / 1297 * 50%);
+  max-width: 50%;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+.hero-object:hover {
+  background: url(../img/cutout_c.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 0;
+  padding-top: calc(746 / 1297 * 50%);
+}
+
+.hero-object.pinned {
+  position: absolute;
+  left: 0;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+@media screen and (max-width: 768px) {
+  .hero-object, .hero-object:hover {
+    padding-top: calc(746 / 1297 * 75%);
+    max-width: 75%;
+  }
+}
+
+.home h2 {
+  font-size: 5rem;
+  margin: 3rem 0;
+  text-align: center;
+}
+
+@media screen and (max-width: 400px) {
+  .home {
+    background-size: 20%;
+  }
+  .home h2 {
+    font-size: 3.5rem;
+    line-height: 1;
+  }
+}
+
+.home .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.quicklook {
+  text-align: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+  margin-top: 3rem;
+
+  outline: 8px solid var(--yellow);
+  padding: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .quicklook {
+    position: absolute;
+    margin: 0 6rem 6rem 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.quicklook h4 { border: none; }
+.quicklook .openornot { font-weight: 700; }
+
+.quicklook span {
+  font-size: 2rem;
+  margin-bottom: .5rem;
+}
+.quicklook a { color: var(--white); }

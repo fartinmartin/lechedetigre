@@ -1,0 +1,18 @@
+#where {
+  position: relative;
+  text-align: center;
+  background: var(--blue);
+  padding: 4rem 0 16rem 0;
+}
+
+#where .title {
+  transform: rotate(-3deg);
+}
+
+.map-container {
+  text-align: left;
+  position: relative;
+  height: 40rem;
+  max-width: 700px;
+  margin: 0 auto;
+}

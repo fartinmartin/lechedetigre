@@ -1,0 +1,22 @@
+.pattern-01 {
+  margin-top: -15px;
+  transform: rotate(-1deg);
+}
+
+.pattern-02 {
+  transform: rotate(.5deg);
+}
+
+@media screen and (max-width: 400px) {
+  .pattern-01 { margin-top: -6px; }
+}
+
+.truck-sep {
+  background: url("../img/cutout_c.png");
+  background-size: contain;
+  background-position: center;
+  height: 10rem;
+  margin-top: -5rem;
+  z-index: 10;
+  position: relative;
+}

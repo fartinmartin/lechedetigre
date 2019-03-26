@@ -1,0 +1,148 @@
+#menu {
+  background-color: var(--lightblue);
+  padding-bottom: 12rem;
+  text-align: center;
+}
+
+#menu .title {
+  -webkit-transform: rotate(-3deg);
+          transform: rotate(-3deg);
+}
+
+#menu .container {
+  max-width: 700px;
+}
+
+/* menu tabs */
+
+.tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#eat,
+#drinks {
+  background-color: var(--white);
+}
+
+.tablink img {
+  margin-right: .5rem;
+}
+
+.tablink {
+  border-bottom: 8px solid var(--yellow);
+  padding: 1.5rem 0;
+  font-size: 2.5rem;
+  text-decoration: none;
+  color: var(--white);
+
+  -webkit-box-flex: 1;
+
+      -ms-flex: 1 1 50%;
+
+          flex: 1 1 50%;
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#drink-tab {
+  border-bottom: 8px solid var(--pink);
+}
+
+.active-tab {
+  border-bottom: none !important;
+  background: var(--white);
+  font-weight: 700;
+}
+
+#eat-tab.active-tab {
+  border: 8px solid var(--pink);
+  color: var(--pink);
+}
+
+#drink-tab.active-tab {
+  border: 8px solid var(--yellow);
+  color: var(--yellow);
+}
+
+#eat-tab.active-tab .cls-1 {
+  fill: var(--pink);
+}
+
+#drink-tab.active-tab .st0 {
+  fill: var(--yellow);
+}
+
+/* menu content */
+.menu {
+  padding: 0 6rem 4rem 6rem;
+  text-align: center;
+  display: none;
+  border: 8px solid var(--pink);
+  border-top: none;
+}
+
+.active-menu {
+  display: block;
+}
+
+#eat {
+  border-color: var(--pink);
+}
+
+#drinks {
+  border-color: var(--yellow);
+}
+
+@media only screen and (max-width: 460px) {
+  .menu {
+    padding: 0 0 4rem 0;
+  }
+}
+
+.menu-info {
+  font-style: italic;
+  font-size: 1.6rem;
+  padding: 4rem 0 1.5rem 0;
+}
+
+.menu h5 {
+  display: block;
+  margin: 0 auto;
+  border-bottom: 4px solid var(--blue);
+}
+
+.price {
+  color: var(--green);
+}
+
+.menu-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  margin: 1.5rem;
+}
+
+.menu-item p {
+  width: 100%;
+  color: var(--grey);
+  font-size: 1.8rem;
+  line-height: 1.25;
+  margin-bottom: 3rem;
+}
