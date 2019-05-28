@@ -41,3 +41,7 @@
     letter-spacing: .025em;
   }
 }
+
+.slick-arrow {
+  display: none !important;
+}
