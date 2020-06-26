@@ -1,55 +1,32 @@
-window.addEventListener("DOMContentLoaded", function() {
-  // store tabs variable
-  let tabs = [...(document.querySelectorAll('.tablink'))];
-  let menus = [...(document.querySelectorAll('.menu'))];
+window.addEventListener("DOMContentLoaded", function () {
+  let currentTabIsEat = true;
+  let tabs = [...document.querySelectorAll(".tablink")];
+  let menus = [...document.querySelectorAll(".menu")];
 
-  function tabClicks(tabClickEvent) {
-    // remove active-tab class
-		for (var tab of tabs) {
-			tab.classList.remove("active-tab");
-    }
+  const reset = () => {
+    tabs.forEach((tab) => {
+      tab.classList.remove("active-tab");
+    });
+    menus.forEach((menu) => {
+      menu.classList.remove("active-menu");
+    });
+  };
 
-    // current tab
-    var clickedTab = tabClickEvent.currentTarget;
-		clickedTab.classList.toggle("active-tab");
-    tabClickEvent.preventDefault();
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", (e) => {
+      e.preventDefault();
+      console.log(tab.id);
+      currentTabIsEat = tab.id === "eat-tab" ? true : false;
 
-    // content
-    // for (i = 0; i < tabs.length; i++) {
-    //   if (tabs[i].classList.contains("active-tab")) {
-    //     menus[i].classList.toggle("active-menu");
-    //   }
-    // }
-    for (pane of menus) {
-      pane.classList.toggle("active-menu");
-    }
-	}
-
-	for (i = 0; i < tabs.length; i++) {
-		tabs[i].addEventListener("click", tabClicks)
-	}
+      if (currentTabIsEat) {
+        reset();
+        tabs[0].classList.add("active-tab");
+        menus[0].classList.add("active-menu");
+      } else {
+        reset();
+        tabs[1].classList.add("active-tab");
+        menus[1].classList.add("active-menu");
+      }
+    });
+  });
 });
-
-// window.addEventListener("load", function() {
-// 	// store tabs variable
-// 	var myTabs = document.querySelectorAll(".tablink");
-//   function myTabClicks(tabClickEvent) {
-// 		for (var i = 0; i < myTabs.length; i++) {
-// 			myTabs[i].classList.remove("active-tab");
-// 		}
-// 		var clickedTab = tabClickEvent.currentTarget;
-// 		clickedTab.classList.add("active-tab");
-// 		tabClickEvent.preventDefault();
-// 		var myContentPanes = document.querySelectorAll(".menu");
-// 		for (i = 0; i < myContentPanes.length; i++) {
-// 			myContentPanes[i].classList.remove("active-menu");
-// 		}
-// 		var anchorReference = tabClickEvent.target;
-// 		var activePaneId = anchorReference.getAttribute("href");
-// 		var activePane = document.querySelector(activePaneId);
-// 		activePane.classList.add("active-menu");
-// 	}
-// 	for (i = 0; i < myTabs.length; i++) {
-// 		myTabs[i].addEventListener("click", myTabClicks)
-// 	}
-// });

@@ -1,12 +1,18 @@
 #menu {
-  background-color: var(--lightblue);
+  background: rgb(60, 155, 188);
+  background: linear-gradient(
+    0deg,
+    rgba(60, 155, 188, 1) 50%,
+    rgba(60, 155, 188, 0) 100%
+  );
   padding-bottom: 12rem;
   text-align: center;
+  min-height: 100vh;
 }
 
 #menu .title {
   -webkit-transform: rotate(-3deg);
-          transform: rotate(-3deg);
+  transform: rotate(-3deg);
 }
 
 #menu .container {
@@ -27,7 +33,7 @@
 }
 
 .tablink img {
-  margin-right: .5rem;
+  margin-right: 0.5rem;
 }
 
 .tablink {
@@ -39,9 +45,9 @@
 
   -webkit-box-flex: 1;
 
-      -ms-flex: 1 1 50%;
+  -ms-flex: 1 1 50%;
 
-          flex: 1 1 50%;
+  flex: 1 1 50%;
 
   display: -webkit-box;
 
@@ -49,11 +55,11 @@
 
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 #drink-tab {
@@ -132,10 +138,10 @@
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
   margin: 1.5rem;
 }
 
